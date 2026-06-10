@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+       <nav>
+        <div class="logo"> </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="links" id="nav-links">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about-section" class="nav-link">About Us</a></li>
+                <li><a href="#stats-section" class="nav-link">Review</a></li>
+            </ul>
+            <div class="search-1">
+            <input class="form-control" type="text" placeholder="Explore space...">
+           <button class="btn-success" type="submit">Search</button>
+           </div>
+        </div>
+       </nav>
+
+       <script>
+         const hamburger = document.getElementById('hamburger');
+         const navLinks = document.getElementById('nav-links');
+         hamburger.addEventListener('click', () => {
+           const isOpen = navLinks.classList.toggle('open');
+           hamburger.classList.toggle('active', isOpen);
+           hamburger.setAttribute('aria-expanded', isOpen);
+         });
+         // Close menu when a nav link is clicked
+         document.querySelectorAll('.nav-link').forEach(link => {
+           link.addEventListener('click', () => {
+             navLinks.classList.remove('open');
+             hamburger.classList.remove('active');
+             hamburger.setAttribute('aria-expanded', false);
+           });
+         });
+       </script>
+       
+  <div class="hero-container" id="home">
+   <div class="hero-1">
+      <div class="hero-overlay">
+         <h1 class="hero-title">Welcome</h1>
+         <p class="text-1">Earth, the beautiful place we call home</p>
+      </div>
+   </div>
+   <div class="container">
+   </div>
+</div>
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+<!-- About section with immersive design -->
+<div class="feature-section" id="about-section">
+    <div class="about-card">
+        <div class="about-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/040/333/101/small/ai-generated-space-scavenger-isolated-on-transparent-background-free-png.png" alt="Earth cosmic view">
+        </div>
+        <div class="about-content">
+            <span class="about-tag">✦ Our Mission</span>
+            <h2>Discover & Share the Universe</h2>
+            <p>Space is more than an endless sky — it’s a universe filled with wonders waiting to be explored. From glowing nebulae and distant galaxies to mysterious black holes and shining stars, every part of the cosmos holds secrets and beauty beyond imagination. Our mission is to bring the marvels of space closer to everyone and spark curiosity about what lies beyond our world.</p>
+            <p>Join a growing community of explorers who look up and wonder every day. Journey through stunning cosmic views, uncover the mysteries of the universe, and celebrate the endless adventure of space.</p>
+            <div class="btn-group">
+                <button class="btn-eco">Explore Gallery →</button>
+                <button class="btn-eco-outline">Learn More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Enhanced Gallery with filter and real descriptions -->
+<section class="gallery" id="gallery">
+    <h2 class="gallery-title">Our Gallery</h2>
+    <p class="gallery-sub">Witness nature & space in ultra HD</p>
+
+    <input type="radio" name="filter" id="all" checked>
+    <input type="radio" name="filter" id="nature">
+    <input type="radio" name="filter" id="space">
+
+    <div class="gallery-filter">
+        <label for="all">All</label>
+        <label for="nature">Nature</label>
+        <label for="space">Space</label>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item nature">
+            <img src="https://images.pexels.com/photos/450441/pexels-photo-450441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountain lake">
+            <div class="overlay">🏔️ Alpine Serenity</div>
+        </div>
+        <div class="gallery-item space">
+            <img src="https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=600" alt="Galaxy">
+            <div class="overlay">✨ Milky Way Core</div>
+        </div>
+        <div class="gallery-item nature">
+            <img src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Amazon rainforest">
+            <div class="overlay">🌿 Amazon Rainforest</div>
+        </div>
+        <div class="gallery-item space">
+            <img src="https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nebula">
+            <div class="overlay">🌀 Eagle Nebula</div>
+        </div>
+        <div class="gallery-item nature">
+            <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ocean waves">
+            <div class="overlay">🌊 Pacific Horizon</div>
+        </div>
+        <div class="gallery-item space">
+            <img src="https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Astronaut">
+            <div class="overlay">🚀 Earth from Orbit</div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Fun facts & stats -->
+<div class="stats-section" id="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h3>8.7M+</h3>
+            <p>Species on Earth</p>
+        </div>
+        <div class="stat-item">
+            <h3>71%</h3>
+            <p>Ocean coverage</p>
+        </div>
+        <div class="stat-item">
+            <h3>4.5B</h3>
+            <p>Years of wonder</p>
+        </div>
+        <div class="stat-item">
+            <h3>195+</h3>
+            <p>Countries explored</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo / About -->
+    <div class="footer-section">
+      <h2 class="footer-logo">Earth</h2>
+      <p>Explore the beauty of our planet and discover amazing places around the world.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="index.html">Review</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: sraj16132@email.com</p>
+      <p>Phone: +91 8709818398</p>
+    </div>
+
+    <!-- Social Media -->
+   <div class="footer-section">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/YourPage" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/YourPage" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com/YourPage" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+</div>
+
+
+  <div class="footer-bottom">
+    <p>© 2026 Earth Website | All Rights Reserved</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
